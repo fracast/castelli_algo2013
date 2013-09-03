@@ -28,5 +28,7 @@ class testApp : public ofBaseApp{
         float startTime;
         float distance;
         float squareSpeed;
-		
+        float totTime;
+
+    
 };

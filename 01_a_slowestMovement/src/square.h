@@ -1,12 +1,21 @@
+//
+//  square.cpp
+//  01_1_slowestMovement
+//
+//  Created by Francesca Castelli on 8/30/13.
+//
+//
+
 #pragma once
 
 #include "ofMain.h"
 
 class rectangle {
-    public:
+public:
     
     rectangle();
     
+    void update();
     void draw();
     
     void interpolateByPct(float myPct);
@@ -16,9 +25,10 @@ class rectangle {
     ofPoint posb;
     
     float   pct;
+    float   velocity;
     
-//    float   radius;
-//    float   radiusa;
-//    float   radiusb;
+    //    float   radius;
+    //    float   radiusa;
+    //    float   radiusb;
     
 };
