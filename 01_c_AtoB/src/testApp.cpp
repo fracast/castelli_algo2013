@@ -9,12 +9,18 @@ void testApp::setup(){
     myRectangle.pos.x = ofGetWindowWidth()/2;
     myRectangle.pos.y = ofGetWindowHeight()/2;
     
+    myRectangle.posa.x = ofGetWindowWidth() /2;
+    myRectangle.posa.y = ofGetWindowHeight() /2;
+    
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
     
     //myRectangle.xenoToPoint(mouseX, mouseY);
+    
+    myRectangle.newPos;
+    
     
 }
 
@@ -66,7 +72,7 @@ void testApp::mousePressed(int x, int y, int button){
 
     myRectangle.newPos = !myRectangle.newPos;
     myRectangle.update();
-    
+    myRectangle.draw();
 }
 
 //--------------------------------------------------------------

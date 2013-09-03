@@ -35,8 +35,9 @@ void rectangle::draw(){
     ofFill();
     ofSetRectMode(OF_RECTMODE_CENTER);
     ofSetColor(255, 0, 255);
-    ofRect(pos.x, pos.y, 20, 20);
-    
+    ofRect(posb.x, posb.y, 20, 20);
+    ofRect(posa.x, posa.y, 20, 20);
+
 }
 
 void rectangle::xenoToPoint(float catchX, float catchY){
