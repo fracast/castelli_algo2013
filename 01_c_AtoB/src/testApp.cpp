@@ -15,7 +15,7 @@ void testApp::setup(){
 void testApp::update(){
     
     //myRectangle.xenoToPoint(mouseX, mouseY);
-
+    
 }
 
 //--------------------------------------------------------------
@@ -24,6 +24,7 @@ void testApp::draw(){
     //square
     
     myRectangle.draw();
+
     
     // line connecting squares
     
