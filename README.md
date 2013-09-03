@@ -1,0 +1,1 @@
+Assignments for the Fall 2013 class Algorithmic Animation at Parsons MFADT by Charlie Whitney
