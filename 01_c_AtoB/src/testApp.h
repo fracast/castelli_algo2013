@@ -24,4 +24,6 @@ class testApp : public ofBaseApp{
         rectangle myRectangle;
     
         ofPoint pos;
+        ofPoint posa;
+        ofPoint posb;
 };

@@ -18,8 +18,13 @@ void rectangle::update(){
     
     if (newPos == true) {
         
-        pos.x = ofGetMouseX();
-        pos.y = ofGetMouseY();
+        posa.x = ofGetMouseX();
+        posa.y = ofGetMouseY();
+        
+    } else if (newPos == false){
+        
+        posb.x = ofGetMouseX();
+        posb.y = ofGetMouseY();
         
     }
         
