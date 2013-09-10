@@ -20,11 +20,11 @@ void testApp::update(){
         
         if (i == 0) {
             
-            myRects[i].xenoToPoint(mouseX, mouseY);
+            myRects[i].xenoToPoint(ofVec2f(mouseX, mouseY));
             
         } else {
             
-            myRects[i].xenoToPoint(myRects[i-1].pos.x, myRects[i-1].pos.y);
+            myRects[i].xenoToPoint(myRects[i-1].pos);
             
         }
     }

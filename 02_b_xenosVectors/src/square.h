@@ -23,7 +23,7 @@ public:
     
     rectangle();
     
-    void xenoToPoint(float catchX, float catchY);
+    void xenoToPoint(ofVec2f catchUp);
     void draw();
     void update();
     

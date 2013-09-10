@@ -9,6 +9,7 @@
 #include "square.h"
 
 rectangle::rectangle(){
+    
     ofSetRectMode( OF_RECTMODE_CENTER);
     catchUpSpeed = 0.2;
     
@@ -21,14 +22,14 @@ void rectangle::update(){
 void rectangle::draw(){
     
     ofSetColor(color);
+    ofRect(pos.x, pos.y, 20, 20);
     
-    ofRect( pos.x, pos.y, 20, 20 );
 }
 
-void rectangle::xenoToPoint(float catchX, float catchY){
+void rectangle::xenoToPoint( ofVec2f catchUp ){ //credits to bernardo schorr
     
-    pos.x = catchUpSpeed * catchX + (1-catchUpSpeed) * pos.x;
+    pos.x = catchUpSpeed * catchUp.x + (1-catchUpSpeed) * pos.x;
     
-    pos.y = catchUpSpeed * catchY + (1-catchUpSpeed) * pos.y;
+    pos.y = catchUpSpeed * catchUp.y + (1-catchUpSpeed) * pos.y;
     
 }
