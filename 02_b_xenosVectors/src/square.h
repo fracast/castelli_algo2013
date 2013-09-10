@@ -18,7 +18,9 @@
 #include "ofMain.h"
 
 class rectangle{
+    
 public:
+    
     rectangle();
     
     void xenoToPoint(float catchX, float catchY);
@@ -26,6 +28,7 @@ public:
     void update();
     
     ofVec2f pos;
+    ofColor color;
     
     float catchUpSpeed;
 

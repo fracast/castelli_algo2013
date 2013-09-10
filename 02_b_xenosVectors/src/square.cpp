@@ -14,9 +14,13 @@ rectangle::rectangle(){
     
 }
 
+void rectangle::update(){
+    
+}
+
 void rectangle::draw(){
     
-    ofSetColor(255 * (pos.y / ofGetHeight() ), 0, 0 );
+    ofSetColor(color);
     
     ofRect( pos.x, pos.y, 20, 20 );
 }

@@ -1,6 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
+#include "square.h"
+
+#define NRECT 10
 
 class testApp : public ofBaseApp{
 
@@ -20,3 +23,5 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
 };
+
+rectangle myRects [NRECT];
