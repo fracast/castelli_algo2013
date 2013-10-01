@@ -27,8 +27,11 @@ class testApp : public ofBaseApp{
     void exit();
     
     ofxUICanvas *gui;
-    float circleRadius;
-    ofColor circleColor;
     
-		
+    float circleRadius;
+    float outerRadius;
+    float noisePar;
+    
+    ofColor blobColor;
+    
 };
