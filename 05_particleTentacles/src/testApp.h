@@ -1,3 +1,6 @@
+
+//Based on code created by Charlie Whitney
+
 #pragma once
 
 #include "ofMain.h"

@@ -1,10 +1,5 @@
-//
-//  Particle.cpp
-//  NoiseParticles
-//
-//  Created by Charlie Whitney on 9/18/13.
-//
-//
+
+//Based on code created by Charlie Whitney
 
 #include "Particle.h"
 
