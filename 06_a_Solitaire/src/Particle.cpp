@@ -14,11 +14,12 @@ Particle::Particle() {
     mass = 10.0;
     pos.x = 10;
     pos.y = 10;
+    image.loadImage("card.png");
 }
 
 void Particle::applyForce(ofVec2f force){
-    accel += force;
-    //accel += (force / mass) * TWO_PI;
+    //accel += force;
+    accel += (force / mass) * TWO_PI;
 }
 
 void Particle::update(){
@@ -38,6 +39,7 @@ void Particle::update(){
 }
 
 void Particle::draw() {
-    ofSetColor(0, 255, 0);
-    ofRect(pos.x, pos.y, mass*10, mass*10);//( pos, mass*10 );
+    ofSetColor(200);
+    ofFill();
+    image.draw(pos.x, pos.y, mass*20, mass*30);//( pos, mass*10 );
 }

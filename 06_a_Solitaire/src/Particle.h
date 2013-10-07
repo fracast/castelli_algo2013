@@ -19,6 +19,8 @@ public:
     ofVec2f accel;
     float mass;
     
+    ofImage image;
+    
     void applyForce( ofVec2f force );
     void update();
     void draw();

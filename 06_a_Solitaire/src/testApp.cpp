@@ -16,9 +16,9 @@ void testApp::setup(){
      
      */
     
-    for( int i=0; i<2; i++){
+    for( int i=0; i<10; i++){
         Particle p;
-        p.mass = ofRandom(2);
+        p.mass = 2;//ofRandom(2);
         mParticleList.push_back( p );
     }
     
@@ -32,7 +32,7 @@ void testApp::setup(){
 void testApp::update(){
     
     
-    ofVec2f gravity( 0.0, 0.3);
+    ofVec2f gravity( 0.0, 0.8);
     //ofVec2f wind( 0.1, 0.0);
     
     for( int i=0; i<10; i++){
@@ -51,7 +51,7 @@ void testApp::update(){
 void testApp::draw(){
     ofFill();
     
-    ofSetColor(0,0,0, 255*0.1);
+    ofSetColor(0,0,255,0);
     ofRect( ofGetWindowRect() );
     
     ofNoFill();
