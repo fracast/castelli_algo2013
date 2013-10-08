@@ -11,15 +11,15 @@
 #include "Particle.h"
 
 Particle::Particle() {
-    mass = 10.0;
-    pos.x = 10;
-    pos.y = 10;
+    mass = 20.0;
+    pos.x = ofGetWindowWidth()/2;
+    pos.y = 20;
     image.loadImage("card.png");
 }
 
 void Particle::applyForce(ofVec2f force){
     //accel += force;
-    accel += (force / mass) * TWO_PI;
+    accel += (force / mass);
 }
 
 void Particle::update(){
@@ -41,5 +41,5 @@ void Particle::update(){
 void Particle::draw() {
     ofSetColor(200);
     ofFill();
-    image.draw(pos.x, pos.y, mass*20, mass*30);//( pos, mass*10 );
+    image.draw(pos.x, pos.y, 98, 133);//( pos, mass*10 );
 }

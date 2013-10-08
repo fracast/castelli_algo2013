@@ -16,13 +16,13 @@ void testApp::setup(){
      
      */
     
-    for( int i=0; i<10; i++){
+    for( int i=0; i<5; i++){
         Particle p;
-        p.mass = 2;//ofRandom(2);
+        p.mass = 1;
         mParticleList.push_back( p );
     }
     
-    ofBackground( 0 );
+    ofBackground( 0, 150, 100 );
     ofSetBackgroundAuto(false);
     
     ofEnableAlphaBlending();
@@ -33,15 +33,13 @@ void testApp::update(){
     
     
     ofVec2f gravity( 0.0, 0.8);
-    //ofVec2f wind( 0.1, 0.0);
     
-    for( int i=0; i<10; i++){
-        //        mParticleList[i].applyForce( gravity );
+    for( int i=0; i<5; i++){
+        //mParticleList[i].applyForce( gravity );
         mParticleList[i].applyForce( gravity * mParticleList[i].mass );
         
-        //        mParticleList[i].applyForce( wind );
-        //        mParticleList[i].applyForce( ofVec2f(ofRandom(-3,3), 0) );
-        mParticleList[i].applyForce( ofVec2f( ofNoise(mParticleList[i].pos.y) - 0.5, 0) );
+        mParticleList[i].applyForce( ofVec2f(ofRandom(-0.5,0.5), 0) );
+        //mParticleList[i].applyForce( ofVec2f( ofNoise(mParticleList[i].pos.y) - 0.5, 0) );
         
         mParticleList[i].update();
     }
