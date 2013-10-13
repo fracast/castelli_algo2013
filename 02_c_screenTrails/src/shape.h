@@ -2,13 +2,29 @@
 //  shape.h
 //  02_c_screenTrails
 //
-//  Created by Francesca Castelli on 9/15/13.
+//  Created by Francesca Castelli on 9/3/13.
 //
 //
+#pragma once
+#include "ofMain.h"
 
-#ifndef ___2_c_screenTrails__shape__
-#define ___2_c_screenTrails__shape__
-
-#include <iostream>
-
-#endif /* defined(___2_c_screenTrails__shape__) */
+class shape {
+public:
+    shape();
+    
+    void update();
+    void draw();
+    void xenoToPoint( float catchX, float catchY );
+    
+    ofPoint pos;
+    ofPoint targetPos;
+    ofPoint mousePos;
+    ofPoint prevPos;
+    ofVec2f velocity;
+    ofVec2f accel;
+    
+    float catchUpSpeed;
+    
+    int counter;
+    
+};
