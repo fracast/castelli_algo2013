@@ -1,12 +1,8 @@
-#ifndef _TEST_APP
-#define _TEST_APP
-
+#pragma once
 
 #include "ofMain.h"
 
-#include "particle.h"
-
-class testApp : public ofSimpleApp{
+class testApp : public ofBaseApp{
 
 	public:
 		void setup();
@@ -22,10 +18,5 @@ class testApp : public ofSimpleApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-    
-    // let's make a vector of them
-    vector <particle> particles;
 		
 };
-
-#endif
