@@ -7,7 +7,7 @@
 void testApp::setup(){
     ofBackground(0);
     ofSetVerticalSync(true);
-    ofSetFrameRate(60);
+    ofSetFrameRate(120);
 
     // make 50 particles up front!
     for( int i=0; i<100; i++ ){
@@ -32,7 +32,7 @@ void testApp::update(){
     }
     
     // add 50 more particles on click!
-    for( int i=0; i<50; i++ ){
+    for( int i=0; i<100; i++ ){
         addParticle();
         ofSetColor(0, 100, 255,ofRandom(50, 100));
     }
@@ -77,7 +77,6 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-
 
 }
 
