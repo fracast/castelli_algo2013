@@ -11,7 +11,7 @@
 
 //--------------------------------------------
 particle::particle(){
-    setInitialCondition(0, 0, 0, 0);
+    setInitialCondition(ofGetWindowWidth(), ofGetWindowHeight(), ofGetWindowWidth(), ofGetWindowHeight());
     damping = 0.09f;
 }
 
@@ -56,7 +56,6 @@ void particle::addRepulsionForce(float px, float py, float radius, float strengt
 //--------------------------------------------
 void particle::addAttractionForce( float px, float py, float radius, float strength){
 	
-	
 	ofVec2f posOfForce;
 	posOfForce.set(px, py);
 	
@@ -84,8 +83,8 @@ void particle::addClockwiseForce( float px, float py, float radius, float streng
 	if (diff.length() < radius){
 		float pct = 1 - (diff.length() / radius);
 		diff.normalize();
-		frc.x -= diff.y * pct * strength;
-		frc.y += diff.x * pct * strength;
+		frc.x -= diff.x * pct * strength;
+		frc.y += diff.y * pct * strength;
 	}
 	
 }
@@ -118,15 +117,25 @@ void particle::setInitialCondition(float px, float py, float vx, float vy){
 	vel.set(vx,vy);
 }
 
+
+//------------------------------------------------------------
+void particle::xenoToPoint (float catchX, float catchY){
+    
+    pos.x = catchUpSpeed * catchX + (1-catchUpSpeed) * pos.x;
+    pos.y = catchUpSpeed * catchY + (1-catchUpSpeed) * pos.y;
+    
+}
+
 //------------------------------------------------------------
 void particle::update(){
-	vel = vel + frc;
-	pos = pos + vel;
+	vel += frc *2;
+	pos += vel;
 }
 
 //------------------------------------------------------------
 void particle::draw(){
-    ofCircle(pos.x, pos.y, 3);
+    ofSetColor(0, 255, 255, 100);
+    ofCircle(pos.x, pos.y, 1);
 }
 
 

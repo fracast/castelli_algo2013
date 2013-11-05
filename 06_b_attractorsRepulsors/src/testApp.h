@@ -5,6 +5,7 @@
 #include "ofMain.h"
 
 #include "particle.h"
+#include "Particle2.h"
 
 class testApp : public ofSimpleApp{
     
@@ -25,6 +26,7 @@ public:
     
     // let's make a vector of them
     vector <particle> particles;
+    vector <particle2> particles2;
     
 };
 

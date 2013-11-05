@@ -30,7 +30,9 @@ public:
     void addAttractionForce( float px, float py, float radius, float strength);
     void addClockwiseForce( float px, float py, float radius, float strength);
     void addCounterClockwiseForce( float px, float py, float radius, float strength);
+    void xenoToPoint( float catchX, float catchY );
 	
+    float catchUpSpeed;
 	
     float damping;
     
