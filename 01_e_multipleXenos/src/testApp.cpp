@@ -9,19 +9,32 @@ void testApp::setup(){
 	ofEnableAlphaBlending();
 	
 	// set the position of the rectangle:
-	myRectangle.pos.x = 100;
-	myRectangle.pos.y = 50;
+//	myRectangle.pos.x = 100;
+//	myRectangle.pos.y = 50;
+    
 	
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-	myRectangle.xenoToPoint(mouseX, mouseY);
+	//rectangles[i].xenoToPoint(mouseX, mouseY);
+    
+    for (int i = 0; i < 10; i++) {
+        if (i ==0) {
+            rectangles[i].xenoToPoint(mouseX, mouseY);
+        }else{
+            rectagles[i].xenoToPoint(rectagles[i-1].pos.x, rectagles[i-1].pos.y);
+        }
+    }
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	myRectangle.draw();
+    for ( int i = 0; i < 10; i++) {
+        rectangles[i].draw();
+    }
+
+
 }
 
 //--------------------------------------------------------------
@@ -45,5 +58,21 @@ void testApp::mousePressed(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void testApp::mouseReleased(){
+void testApp::mouseReleased(int x, int y, int button){
+    
+}
+
+//--------------------------------------------------------------
+void testApp::windowResized(int w, int h){
+    
+}
+
+//--------------------------------------------------------------
+void testApp::gotMessage(ofMessage msg){
+    
+}
+
+//--------------------------------------------------------------
+void testApp::dragEvent(ofDragInfo dragInfo){
+    
 }

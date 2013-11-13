@@ -4,14 +4,14 @@
 
 
 rectangle::rectangle(){
-    
+    ofRectMode( OF_RECTMODE_CENTER);// center around the position
     catchUpSpeed = 0.03f;
 
 }
 
 void rectangle::draw(){
     ofFill();
-	ofSetRectMode(OF_RECTMODE_CENTER); // center around the position
+	//ofSetRectMode(OF_RECTMODE_CENTER); // center around the position
     ofSetColor(255,0,255);
     ofRect(pos.x, pos.y, 40, 40);
 }

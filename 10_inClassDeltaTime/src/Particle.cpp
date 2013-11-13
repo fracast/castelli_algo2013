@@ -16,15 +16,24 @@ void Particle::applyForce(ofVec2f force){
     accel += (force / mass);
 }
 
-void Particle::update(){
+void Particle::update( float dt ){
     vel += accel;
-    pos += vel;
+    pos += (vel * dt);
     
-    vel*= 0.97;
+//    vel*= 0.97;
+
+    if(pos.x<0 || pos.x > ofGetWindowWidth() ){
+        vel.x *= -1;
+    }
+    
+    if(pos.y<0 || pos.x > ofGetWindowHeight() ){
+        vel.y *= -1;
+    }
     
     accel.set(0);
 }
 
 void Particle::draw() {
-    ofCircle( pos, 4 );
+    ofSetColor(0, ofRandom(200, 255), ofRandom(200, 255));
+    ofCircle( pos, 2 );
 }

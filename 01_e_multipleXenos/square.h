@@ -1,6 +1,8 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
+
+#pragma once
 #include "ofMain.h"
 
 class rectangle {
@@ -17,5 +19,7 @@ class rectangle {
     float		catchUpSpeed;
 
 };
+
+rectangle rectagles[10];
 
 #endif // RECTANGLE_H

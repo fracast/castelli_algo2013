@@ -7,3 +7,7 @@
 //
 
 #include "timePoint.h"
+
+timePoint::timePoint(){
+    
+}

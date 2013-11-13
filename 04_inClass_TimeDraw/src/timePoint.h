@@ -6,9 +6,20 @@
 //
 //
 
-#ifndef ___4_inClass_TimeDraw__timePoint__
-#define ___4_inClass_TimeDraw__timePoint__
 
-#include <iostream>
+#pragma once
+#include "ofMain.h"
 
-#endif /* defined(___4_inClass_TimeDraw__timePoint__) */
+class timePoint {
+public:
+    
+    timePoint();
+    float x, y, t;
+    
+    
+};
+
+//struct timePoint2 {
+    
+    
+//};

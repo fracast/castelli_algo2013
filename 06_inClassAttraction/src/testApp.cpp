@@ -2,12 +2,23 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+    ofSetVerticalSync(true);
+    ofSetFrameRate(60);
+    
+    earth.pos = ofGetWindowSize() / 2;
+    earth.mass * 2;
+    
+    moon.mass = 0.5;
+    moon.pos = ofVec2f(100, 300);
 
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+    
+    ofVec2f pull = earth.attract( moon );
+    moon.applyForce (pull); 
+    moon.update;
 }
 
 //--------------------------------------------------------------

@@ -7,7 +7,7 @@ void testApp::setup(){
     
     pos = ofGetWindowSize()/2;
     ofSetVerticalSync(true);
-    ofSetFrameRate(120);
+    ofSetFrameRate(120);    
     
     ofSetBackgroundAuto(false);
     ofEnableAlphaBlending();

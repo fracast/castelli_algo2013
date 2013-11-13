@@ -2,17 +2,29 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-
+    ofSetVerticalSync(true);
+    ofSetFrameRate(60);
+    ofBackground(0);
+    
+    ofEnableDepthTest();
+    
+    flocker.addParticle(500);
+    
+    cam.setDistance(100);
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
+    flocker.applyForces(80, 0.4, 0.75);
+    flocker.update();
 
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
+    cam.begin();
+    flocker.draw();
+    cam.end();
 }
 
 //--------------------------------------------------------------

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Flock.h"
 
 class testApp : public ofBaseApp{
 
@@ -19,4 +20,9 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+    
+    FlockController flocker;
+    
+    ofEasyCam cam;
+    
 };

@@ -6,9 +6,23 @@
 //
 //
 
-#ifndef ___6_inClassAttraction__Planet__
-#define ___6_inClassAttraction__Planet__
+#pragma once
+#include "ofMain.h"
 
-#include <iostream>
+class Planet {
+public:
+    Planet();
+    
+    void applyForce ( ofVec2f force);
+    
+    void update();
+    void draw();
+    
+    ofVec2f attract(Planet p);
+    ofVec2f pos, vel, acc;
+    
+    float mass;
+    
+    float G;
+};
 
-#endif /* defined(___6_inClassAttraction__Planet__) */

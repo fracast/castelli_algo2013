@@ -6,9 +6,19 @@
 //
 //
 
-#ifndef ___5_inClassgridParticles__Particle__
-#define ___5_inClassgridParticles__Particle__
+#pragma once
+#include "ofMain.h"
 
-#include <iostream>
-
-#endif /* defined(___5_inClassgridParticles__Particle__) */
+class Particle {
+public:
+    
+    Particle(ofVec2f position);
+    
+    void update(const ofImage &img);
+    void draw();
+    
+    ofVec2f pos;
+    float radius;
+    float grayValue;
+    
+};

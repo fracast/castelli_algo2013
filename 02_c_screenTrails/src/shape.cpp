@@ -46,6 +46,7 @@ void shape::draw() {
     ofSetColor(255, 255 * (pos.y / ofGetHeight() ),255 * (pos.x / ofGetWidth() ));
     ofLine(pos.x, pos.y, (pos.x - 50) * PI, (pos.y - 50) * PI/2);
     
+    
 }
     
     

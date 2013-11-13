@@ -6,9 +6,22 @@
 //
 //
 
-#ifndef ___6_inClassForces__Particle__
-#define ___6_inClassForces__Particle__
+#pragma once
+#include "ofMain.h"
 
-#include <iostream>
-
-#endif /* defined(___6_inClassForces__Particle__) */
+class Particle {
+public:
+    Particle();
+    Particle( ofVec2f position );
+    
+    ofVec2f pos;
+    ofVec2f vel;
+    ofVec2f acc;
+    
+    float mass;
+    
+    void applyForce( ofVec2f force );
+    void update();
+    void draw();
+    
+};

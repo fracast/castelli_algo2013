@@ -47,7 +47,7 @@ void Particle::draw(){
     float agePct = 1.0 - ((float)age / (float)lifespan);
 
     ofCircle( pos, 10.0 * agePct  );         // The older pour particle is, the smaller it gets.
-    ofTriangle(pos.x, pos.y, pos.x + 10, pos.y + 10, pos.x - 10, pos.y - 10);
+    //ofTriangle(pos.x, pos.y, pos.x + 10, pos.y + 10, pos.x - 10, pos.y - 10);
     
 
 

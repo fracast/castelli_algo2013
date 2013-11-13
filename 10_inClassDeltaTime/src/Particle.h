@@ -20,6 +20,6 @@ class Particle {
     float mass;
     
     void applyForce( ofVec2f force );
-    void update();
+    void update( float dt );
     void draw();
 };

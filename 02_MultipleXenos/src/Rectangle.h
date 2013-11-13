@@ -12,3 +12,21 @@
 #include <iostream>
 
 #endif /* defined(___2_MultipleXenos__Rectangle__) */
+
+
+#pragma once
+#include "ofMain.h"
+
+class Rectangle{
+    public:
+    Rectangle();
+    
+    void xenoToPoint(float catchX, float catchY);
+    void draw();
+    
+    ofPoint pos;
+    ofPoint targetPos;
+    
+    float catchUpSpeed;
+    
+};

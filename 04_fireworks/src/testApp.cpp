@@ -77,7 +77,7 @@ void testApp::mousePressed(int x, int y, int button){
         ofDrawBitmapString(ofToString(fireworks.size()), 100, 100);
     }
     
-    for(int i=0; i<1; i++){
+    for(int i=0; i<100; i++){
         addFireworks();
     }
     

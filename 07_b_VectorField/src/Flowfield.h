@@ -1,14 +1,28 @@
-//
-//  Flowfield.h
-//  07_b_VectorField
-//
-//  Created by Francesca Castelli on 11/1/13.
-//
-//
 
-#ifndef ___7_b_VectorField__Flowfield__
-#define ___7_b_VectorField__Flowfield__
+#pragma once
+#include "ofMain.h"
 
-#include <iostream>
+typedef vector<ofVec2f> VectorList;
 
-#endif /* defined(___7_b_VectorField__Flowfield__) */
+class FlowField {
+public:
+    FlowField();
+    
+    void setup( int width, int height, int res );
+    void setRandom();
+    void setPerlin();
+    void sinYsinX();
+    void sinXcosY();
+    
+    void negYposX(float radius, float strength);
+    
+    
+    void draw();
+    
+    void drawVector( const ofVec3f &start, const ofVec3f &end, float headLength = 0.2f, float headRadius = 0.05f );
+    void drawVectorAt( const ofVec2f &vec, const ofVec2f &pos );
+    
+    vector<VectorList>  flowList;
+    int                 fieldWidth, fieldHeight, resolution;
+    ofVec2f pos;
+};

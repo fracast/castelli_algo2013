@@ -1,4 +1,4 @@
-// inspired by Gustavo Faria
+// based on Gustavo Faria's code
 
 #include "testApp.h"
 
@@ -28,7 +28,7 @@ void testApp::draw(){
     float angle = ofGetElapsedTimef()   * 0.5;
     float radius = 700;
     
-    float x = radius * cos(angle * 2);
+    float x = radius * cos(angle * 2) * TWO_PI;
     float y = radius * sin( angle * 2);
     
     ofPoint temp;

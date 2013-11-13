@@ -12,3 +12,23 @@
 #include <iostream>
 
 #endif /* defined(___2_inClass__Ball__) */
+
+
+#pragma once
+
+#include "ofMain.h"
+
+class Ball{
+    public:
+    Ball();
+    
+    void update();
+    void draw();
+    
+    ofVec2f pos; // Vector 2 variable x and y float
+    
+    float xVelocity;
+    float yVelocity;
+    
+
+};

@@ -36,7 +36,7 @@ void testApp::draw(){
     
     //ofFill();
     
-    ofSetColor(0,0,0, 255*0.03);
+    ofSetColor(0,0,150, 255*0.03);
     ofRect( ofGetWindowRect() );
     
     for (int i=0; i<shapelist.size(); i++){

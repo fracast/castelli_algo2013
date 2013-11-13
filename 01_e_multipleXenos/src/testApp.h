@@ -1,9 +1,12 @@
 #pragma once
 
 #include "ofMain.h"
+#include "square.h"
+
+#define RECTS 10
 
 class testApp : public ofBaseApp{
-
+    
 	public:
 		void setup();
 		void update();
@@ -21,4 +24,5 @@ class testApp : public ofBaseApp{
 		
     
         rectangle myRectangle;
+        rectangle rectangles[RECTS];
 };

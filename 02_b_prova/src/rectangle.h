@@ -12,3 +12,28 @@
 #include <iostream>
 
 #endif /* defined(___2_b_prova__rectangle__) */
+
+
+#pragma once
+
+#include "ofMain.h"
+
+class Rectangle {
+    
+public:
+    
+    Rectangle();
+    void draw();
+    void update();
+    
+    ofVec2f pos;
+    ofColor color;
+    
+    
+    void xenoToPoint (ofVec2f catchUp);
+    float catchUpSpeed;
+    float angleInDegrees;
+    
+    
+    
+};

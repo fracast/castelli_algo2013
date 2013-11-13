@@ -18,6 +18,14 @@ void Boid::applyForce(ofVec3f force){
 
 void Boid::pullToCenter(ofVec3f center){
     
+    ofVec3f dir = pos - center;
+    float dist = dir.length();
+    float maxDistance = 300.0;
+    
+    if(dist > maxDistance ){
+        dir.normalize();
+        vel -= dir * (dist - maxDistance) * 0.0001f;
+    }
 }
 
 void Boid::update(){
@@ -28,7 +36,7 @@ void Boid::update(){
     vel.limit(3.0);
     
     if (vel.lengthSquared() < minSpeed * minSpeed ){ // lengthSquared optimization
-        vel.normalized() * minSpeed;
+        vel = vel.normalized() * minSpeed;
     }
     
     pos += vel;
@@ -40,6 +48,6 @@ void Boid::draw(){
     ofSetColor(255);
     ofCircle(pos, 2);
     
-    ofSetColor(255, 0, 0);
-    ofLine(pos, pos - vel * 5.0); //longer the tail the fastest is going
+    ofSetColor(0, 255, 0);
+    ofLine(pos, pos - vel * 25.0); //longer the tail the fastest is going
 }

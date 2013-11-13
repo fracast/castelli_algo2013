@@ -6,9 +6,19 @@
 //
 //
 
-#ifndef ___9_inClassFlocking__Flock__
-#define ___9_inClassFlocking__Flock__
+#pragma once
+#include "ofMain.h"
+#include "Boid.h"
 
-#include <iostream>
-
-#endif /* defined(___9_inClassFlocking__Flock__) */
+class FlockController {
+public:
+    FlockController();
+    
+    void applyForces (float zoneRadius, float SeparateThresh=0.4, float alignThresh=0.7 );
+    void addParticle( int numParticles );
+    void update();
+    void draw();
+    
+    vector <Boid> boidList;
+    
+};

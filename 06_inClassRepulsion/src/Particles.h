@@ -6,9 +6,21 @@
 //
 //
 
-#ifndef ___6_inClassRepulsion__Particles__
-#define ___6_inClassRepulsion__Particles__
+#pragma once
+#include "ofMain.h"
 
-#include <iostream>
-
-#endif /* defined(___6_inClassRepulsion__Particles__) */
+class Particle {
+public:
+    Particle();
+    
+    ofVec2f pos, vel, acc;
+    
+    void addForce ( ofVec2f force );
+    void update();
+    void draw();
+    
+    void addRepulsionForce (float px, float py, float radius, float strength);
+    void addAttractionForce (float px, float py, float radius, float strength);
+    
+    float damping;
+};

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D7232911816E486008C96F5 /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D72328F1816E486008C96F5 /* Boid.cpp */; };
+		1D7232941816E847008C96F5 /* Flock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D7232921816E847008C96F5 /* Flock.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -63,6 +64,8 @@
 /* Begin PBXFileReference section */
 		1D72328F1816E486008C96F5 /* Boid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Boid.cpp; path = ../Boid.cpp; sourceTree = "<group>"; };
 		1D7232901816E486008C96F5 /* Boid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Boid.h; path = ../Boid.h; sourceTree = "<group>"; };
+		1D7232921816E847008C96F5 /* Flock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Flock.cpp; sourceTree = "<group>"; };
+		1D7232931816E847008C96F5 /* Flock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flock.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -192,6 +195,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				1D72328F1816E486008C96F5 /* Boid.cpp */,
 				1D7232901816E486008C96F5 /* Boid.h */,
+				1D7232921816E847008C96F5 /* Flock.cpp */,
+				1D7232931816E847008C96F5 /* Flock.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -293,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7232911816E486008C96F5 /* Boid.cpp in Sources */,
+				1D7232941816E847008C96F5 /* Flock.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 			);

@@ -12,3 +12,21 @@
 #include <iostream>
 
 #endif /* defined(___2_accelerationExample__Mover__) */
+
+#pragma once
+#include "ofMain.h"
+
+class Mover {
+    
+    public:
+    Mover();
+    
+    void update();
+    void draw();
+    
+    ofVec2f pos;
+    ofVec2f mousePos;
+    ofVec2f accel;
+    ofVec2f velocity;
+    
+};

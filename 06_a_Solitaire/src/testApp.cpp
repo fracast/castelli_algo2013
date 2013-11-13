@@ -32,7 +32,7 @@ void testApp::setup(){
 void testApp::update(){
     
     
-    ofVec2f gravity( 0.0, 0.8);
+    ofVec2f gravity( 0, 4);
     
     for( int i=0; i<5; i++){
         //mParticleList[i].applyForce( gravity );
