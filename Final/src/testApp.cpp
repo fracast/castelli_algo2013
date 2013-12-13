@@ -16,6 +16,12 @@ void testApp::setup(){
         prey.setup();
         preys.push_back(prey);
     }
+    
+    for(int i = 0; i< 3; i++) {
+        Predator predator;
+        predator.setup();
+        predators.push_back(predator);
+    }
 }
 
 //--------------------------------------------------------------
@@ -24,19 +30,35 @@ void testApp::update(){
     mod();
     
     addFoodAt = 5;
-    startFood = 0;
+    addElements = 60;
+    numFood = 2;
+    numPreys = 2;
+    numPredators = 2;
     
     
-    if(timer > 60){
-        for (int i=0; i<2; i++) {
+    if(timer > addElements){
+        for (int i=0; i<numFood; i++) {
             Food bitesOfFood;
             bitesOfFood.setup();
             //bitesOfFood.draw();
             bites.push_back(bitesOfFood);
         }
         
+        for (int i=0; i<numPreys; i++) {
+            Prey morepreys;
+            morepreys.setup();
+            //bitesOfFood.draw();
+            preys.push_back(morepreys);
+        }
+        
+        for (int i=0; i<numPredators; i++) {
+            Predator morepreds;
+            morepreds.setup();
+            //bitesOfFood.draw();
+            predators.push_back(morepreds);
+        }
+        
         timer = 0;
-        //startFood = ofGetElapsedTimef() ;
     }
     
     for (int i=0; i<preys.size(); i++) {
@@ -48,7 +70,7 @@ void testApp::update(){
 }
 
 void testApp::mod(){
-    int remainder = fmod(ofGetElapsedTimef(), 5);
+    int remainder = fmod(ofGetElapsedTimef(), addFoodAt);
 }
 
 
@@ -56,18 +78,17 @@ void testApp::mod(){
 void testApp::draw(){
     
     ofBackground(0);
-    
-    for (int i=0; i<bites.size(); i++) { 
-        
+    for (int i=0; i<bites.size(); i++) {
         bites[i].draw();
-        
     }
     
     for (int i=0; i<preys.size(); i++) {
-        
         preys[i].draw();
     }
     
+    for (int i=0; i<predators.size(); i++) {
+        predators[i].draw();
+    }
 }
 
 //--------------------------------------------------------------

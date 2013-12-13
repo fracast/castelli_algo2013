@@ -20,18 +20,12 @@ void Prey::update(vector<Food>& bites){
     
     //step 1 identify position of closest food
     float shortestDistance = FLT_MAX;
-    
-    for(int i=0; i<bites.size(); i++)
-    {
-        
+    for(int i=0; i<bites.size(); i++){
         float d = ofDist(pos.x, pos.y, bites[i].pos.x, bites[i].pos.y);
         if( d < shortestDistance) {
-            
             shortestDistance = d;
             posOfClosestFood = bites[i].pos;
-            
         }
-        
     }
     
     //step 2: move towards closest food
@@ -44,9 +38,7 @@ void Prey::update(vector<Food>& bites){
     
     //step 3: Eat
     
-    for(int i=0; i<bites.size(); i++)
-    {
-        
+    for(int i=0; i<bites.size(); i++){
         float d = ofDist(pos.x, pos.y, bites[i].pos.x, bites[i].pos.y);
         if(d<size){
             size += 3;
@@ -54,12 +46,10 @@ void Prey::update(vector<Food>& bites){
             bites.erase(bites.begin() + i);
         }
     }
-    
 }
 
 void Prey::draw(){
     ofSetColor(0xFF9933);
     ofCircle(pos, size);
-    
     ofLine(pos, posOfClosestFood);
 }

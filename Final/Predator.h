@@ -8,13 +8,19 @@
 
 #pragma once
 #include "ofMain.h"
+#include "Prey.h"
 
 
 class Predator{
 public:
     
     void setup();
-    void update();
+    void update(vector<Prey>& preys);
     void draw();
+    
+    float size;
+    float speed;
+    ofPoint pos;
+    ofPoint posOfClosestPrey;
     
 };

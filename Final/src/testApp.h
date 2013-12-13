@@ -1,8 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Food.h"
-#include "Prey.h"
 #include "Predator.h"
 
 
@@ -33,6 +31,9 @@ class testApp : public ofBaseApp{
     vector <Food> bites;
     
     float addFoodAt;
-	float startFood;
+	float addElements;
+    float numFood;
+    float numPreys;
+    float numPredators;
     int timer;
 };

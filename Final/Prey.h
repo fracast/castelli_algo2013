@@ -13,7 +13,7 @@ class Prey{
 public:
     
     void setup();
-    void update(vector<Food>& prey);
+    void update(vector<Food>& bites);
     void draw();
     
     float size;
