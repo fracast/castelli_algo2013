@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D95D1771852547700F92A37 /* Prey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D95D1751852547700F92A37 /* Prey.cpp */; };
-		1D95D17A1852549100F92A37 /* Predator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D95D1781852549100F92A37 /* Predator.cpp */; };
-		1D95D17D185254A500F92A37 /* Food.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D95D17B185254A500F92A37 /* Food.cpp */; };
+		1D690284185BA8160088E516 /* VectorField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D690281185BA8160088E516 /* VectorField.cpp */; };
+		1D69028C185BA8870088E516 /* Food.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D690286185BA8870088E516 /* Food.cpp */; };
+		1D69028D185BA8870088E516 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D690288185BA8870088E516 /* Particle.cpp */; };
+		1D69028E185BA8870088E516 /* Predator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D69028A185BA8870088E516 /* Predator.cpp */; };
+		1D690292185BB2C90088E516 /* Prey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D690290185BB2C90088E516 /* Prey.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -63,12 +65,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1D95D1751852547700F92A37 /* Prey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Prey.cpp; path = ../Prey.cpp; sourceTree = "<group>"; };
-		1D95D1761852547700F92A37 /* Prey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prey.h; path = ../Prey.h; sourceTree = "<group>"; };
-		1D95D1781852549100F92A37 /* Predator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Predator.cpp; path = ../Predator.cpp; sourceTree = "<group>"; };
-		1D95D1791852549100F92A37 /* Predator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Predator.h; path = ../Predator.h; sourceTree = "<group>"; };
-		1D95D17B185254A500F92A37 /* Food.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Food.cpp; path = ../Food.cpp; sourceTree = "<group>"; };
-		1D95D17C185254A500F92A37 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = ../Food.h; sourceTree = "<group>"; };
+		1D690281185BA8160088E516 /* VectorField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorField.cpp; sourceTree = "<group>"; };
+		1D690282185BA8160088E516 /* VectorField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorField.h; sourceTree = "<group>"; };
+		1D690286185BA8870088E516 /* Food.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Food.cpp; sourceTree = "<group>"; };
+		1D690287185BA8870088E516 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		1D690288185BA8870088E516 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
+		1D690289185BA8870088E516 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		1D69028A185BA8870088E516 /* Predator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Predator.cpp; sourceTree = "<group>"; };
+		1D69028B185BA8870088E516 /* Predator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Predator.h; sourceTree = "<group>"; };
+		1D690290185BB2C90088E516 /* Prey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Prey.cpp; sourceTree = "<group>"; };
+		1D690291185BB2C90088E516 /* Prey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prey.h; sourceTree = "<group>"; };
+		1D89A904185BB4770029FC81 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBaseGui.cpp; sourceTree = "<group>"; };
+		1D89A905185BB4770029FC81 /* ofxBaseGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxBaseGui.h; sourceTree = "<group>"; };
+		1D89A906185BB4770029FC81 /* ofxButton.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxButton.cpp; sourceTree = "<group>"; };
+		1D89A907185BB4770029FC81 /* ofxButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxButton.h; sourceTree = "<group>"; };
+		1D89A908185BB4770029FC81 /* ofxGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxGui.h; sourceTree = "<group>"; };
+		1D89A909185BB4770029FC81 /* ofxGuiGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxGuiGroup.cpp; sourceTree = "<group>"; };
+		1D89A90A185BB4770029FC81 /* ofxGuiGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxGuiGroup.h; sourceTree = "<group>"; };
+		1D89A90B185BB4770029FC81 /* ofxLabel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLabel.cpp; sourceTree = "<group>"; };
+		1D89A90C185BB4770029FC81 /* ofxLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxLabel.h; sourceTree = "<group>"; };
+		1D89A90D185BB4770029FC81 /* ofxPanel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxPanel.cpp; sourceTree = "<group>"; };
+		1D89A90E185BB4770029FC81 /* ofxPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxPanel.h; sourceTree = "<group>"; };
+		1D89A90F185BB4770029FC81 /* ofxSlider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSlider.cpp; sourceTree = "<group>"; };
+		1D89A910185BB4770029FC81 /* ofxSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxSlider.h; sourceTree = "<group>"; };
+		1D89A911185BB4770029FC81 /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSliderGroup.cpp; sourceTree = "<group>"; };
+		1D89A912185BB4770029FC81 /* ofxSliderGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxSliderGroup.h; sourceTree = "<group>"; };
+		1D89A913185BB4770029FC81 /* ofxToggle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxToggle.cpp; sourceTree = "<group>"; };
+		1D89A914185BB4770029FC81 /* ofxToggle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxToggle.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -123,9 +146,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D89A902185BB4770029FC81 /* ofxGui */ = {
+			isa = PBXGroup;
+			children = (
+				1D89A903185BB4770029FC81 /* src */,
+			);
+			name = ofxGui;
+			path = ../../../addons/ofxGui;
+			sourceTree = "<group>";
+		};
+		1D89A903185BB4770029FC81 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1D89A904185BB4770029FC81 /* ofxBaseGui.cpp */,
+				1D89A905185BB4770029FC81 /* ofxBaseGui.h */,
+				1D89A906185BB4770029FC81 /* ofxButton.cpp */,
+				1D89A907185BB4770029FC81 /* ofxButton.h */,
+				1D89A908185BB4770029FC81 /* ofxGui.h */,
+				1D89A909185BB4770029FC81 /* ofxGuiGroup.cpp */,
+				1D89A90A185BB4770029FC81 /* ofxGuiGroup.h */,
+				1D89A90B185BB4770029FC81 /* ofxLabel.cpp */,
+				1D89A90C185BB4770029FC81 /* ofxLabel.h */,
+				1D89A90D185BB4770029FC81 /* ofxPanel.cpp */,
+				1D89A90E185BB4770029FC81 /* ofxPanel.h */,
+				1D89A90F185BB4770029FC81 /* ofxSlider.cpp */,
+				1D89A910185BB4770029FC81 /* ofxSlider.h */,
+				1D89A911185BB4770029FC81 /* ofxSliderGroup.cpp */,
+				1D89A912185BB4770029FC81 /* ofxSliderGroup.h */,
+				1D89A913185BB4770029FC81 /* ofxToggle.cpp */,
+				1D89A914185BB4770029FC81 /* ofxToggle.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				1D89A902185BB4770029FC81 /* ofxGui */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -196,12 +253,16 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
-				1D95D1781852549100F92A37 /* Predator.cpp */,
-				1D95D1791852549100F92A37 /* Predator.h */,
-				1D95D1751852547700F92A37 /* Prey.cpp */,
-				1D95D1761852547700F92A37 /* Prey.h */,
-				1D95D17B185254A500F92A37 /* Food.cpp */,
-				1D95D17C185254A500F92A37 /* Food.h */,
+				1D690286185BA8870088E516 /* Food.cpp */,
+				1D690287185BA8870088E516 /* Food.h */,
+				1D690290185BB2C90088E516 /* Prey.cpp */,
+				1D690291185BB2C90088E516 /* Prey.h */,
+				1D69028A185BA8870088E516 /* Predator.cpp */,
+				1D69028B185BA8870088E516 /* Predator.h */,
+				1D690281185BA8160088E516 /* VectorField.cpp */,
+				1D690282185BA8160088E516 /* VectorField.h */,
+				1D690288185BA8870088E516 /* Particle.cpp */,
+				1D690289185BA8870088E516 /* Particle.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -302,11 +363,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D95D1771852547700F92A37 /* Prey.cpp in Sources */,
+				1D69028E185BA8870088E516 /* Predator.cpp in Sources */,
+				1D690292185BB2C90088E516 /* Prey.cpp in Sources */,
+				1D690284185BA8160088E516 /* VectorField.cpp in Sources */,
+				1D69028D185BA8870088E516 /* Particle.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
-				1D95D17A1852549100F92A37 /* Predator.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
-				1D95D17D185254A500F92A37 /* Food.cpp in Sources */,
+				1D69028C185BA8870088E516 /* Food.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

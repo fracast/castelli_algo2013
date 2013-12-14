@@ -2,6 +2,9 @@
 
 #include "ofMain.h"
 #include "Predator.h"
+#include "ofMain.h"
+#include "VectorField.h"
+#include "Particle.h"
 
 
 class testApp : public ofBaseApp{
@@ -26,6 +29,8 @@ class testApp : public ofBaseApp{
     void changePrey();
     void changePredator();
     
+    VectorField myVectorField;
+    vector <Particle> particleList;
     vector <Predator> predators;
     vector <Prey> preys;
     vector <Food> bites;
@@ -36,4 +41,11 @@ class testApp : public ofBaseApp{
     float numPreys;
     float numPredators;
     int timer;
+    bool bHide;
+
+    ofColor color;
+    ofColor colorOne;
+    ofColor colorTwo;
+    
+    ofImage bg;
 };
