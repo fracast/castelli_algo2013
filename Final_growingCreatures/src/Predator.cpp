@@ -9,9 +9,7 @@
 #include "Predator.h"
 
 void Predator::setup(){
-    
-    predator.loadImage("predator.png");
-    predator.resize(60, 60);
+
     
     pos.x = ofRandomWidth();
     pos.y = ofRandomHeight();
@@ -50,6 +48,9 @@ void Predator::update(vector<Prey>& preys){
 }
 
 void Predator::draw(){
-    ofLine(pos+30, posOfClosestPrey+10);
-    predator.draw(pos);
+    ofPushStyle();
+    ofLine(pos, posOfClosestPrey);
+    ofSetColor(0, 255, 255);
+    ofCircle(pos.x, pos.y, size);
+    ofPopStyle();
 }

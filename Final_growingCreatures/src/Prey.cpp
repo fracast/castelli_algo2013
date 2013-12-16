@@ -9,8 +9,7 @@
 
 void Prey::setup(){
     
-    prey.loadImage("prey.png");
-    prey.resize(40, 40);
+
     
     pos.x = ofRandomWidth();
     pos.y = ofRandomHeight();
@@ -53,8 +52,10 @@ void Prey::update(vector<Food>& bites){
 }
 
 void Prey::draw(){
-
-    ofLine(pos+20, posOfClosestFood+10);
-    prey.draw(pos);
+    ofPushStyle();
+    ofLine(pos, posOfClosestFood);
+    ofSetColor(255, 255, 0);
+    ofCircle(pos.x, pos.y, size);
+    ofPopStyle();
 
 }

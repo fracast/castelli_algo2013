@@ -18,8 +18,7 @@ public:
     
     ofVec2f pos;
     ofVec2f vel;
-    
-    ofImage food;
+
 
     
 };

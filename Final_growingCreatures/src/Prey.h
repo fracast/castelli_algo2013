@@ -21,6 +21,6 @@ public:
     ofPoint pos;
     ofPoint posOfClosestFood;
     
-    ofImage prey;
+
     
 };
