@@ -40,8 +40,9 @@ void testApp::setup(){
 //--------------------------------------------------------------
 void testApp::update(){
     
-    float dt = ofGetElapsedTimef() - lastTime;
+    float deltaTime = ofGetElapsedTimef() - lastTime;
     lastTime = ofGetElapsedTimef();
+    cout << " time: " << ofGetElapsedTimef() << endl;
     
     
     // on every frame
@@ -64,7 +65,7 @@ void testApp::update(){
 		particles[i].addDampingForce();
 		particles[i].update();
         
-        particleList[i].update( dt * 40 * timeScale );
+        particles[i].update( deltaTime * 40 * timeScale );
         
         if (i == 0){
             particles[i].xenoToPoint(mouseX, mouseY);
