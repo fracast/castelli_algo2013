@@ -6,9 +6,21 @@
 //
 //
 
-#ifndef ___3_inClassKoch__KochLine__
-#define ___3_inClassKoch__KochLine__
+#pragma once
+#include "ofMain.h"
 
-#include <iostream>
-
-#endif /* defined(___3_inClassKoch__KochLine__) */
+class KochLine {
+public:
+    KochLine( ofVec2f _start, ofVec2f _end );
+    void draw();
+    
+    float getLength();
+    
+    ofVec2f start, end;
+    ofVec2f a();
+    ofVec2f b();
+    ofVec2f c();
+    ofVec2f d();
+    ofVec2f e();
+    
+};

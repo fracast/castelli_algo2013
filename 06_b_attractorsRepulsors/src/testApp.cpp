@@ -9,12 +9,13 @@ void testApp::setup(){
     
 //    ofBackground(0, 110, 255);
     
+    ofSetBackgroundColor(0, 0, 255);
     ofSetBackgroundAuto(false);
     ofEnableAlphaBlending();
 
 	
 	
-	for (int i = 0; i < 2000; i++){
+	for (int i = 0; i < 5000; i++){
 		particle myParticle;
 		myParticle.setInitialCondition(ofRandom(0,1000),ofRandom(0,1000),0,0);
 		// more interesting with diversity :)
@@ -23,7 +24,7 @@ void testApp::setup(){
 		particles.push_back(myParticle);
 	}
     
-    for (int j = 0; j < 5000; j++){
+    for (int j = 0; j < 10000; j++){
 		particle2 myParticle2;
 		myParticle2.setInitialCondition2(ofRandom(0,1000),ofRandom(0,1000),0,0);
 		// more interesting with diversity :)
@@ -46,10 +47,10 @@ void testApp::update(){
 	
 	for (int i = 0; i < particles.size(); i++){
 		particles[i].resetForce();
-        particles[i].addAttractionForce(mouseX, mouseY, 1000, 0.05);
+        particles[i].addAttractionForce(mouseX, mouseY, 2000, 0.1);
 		particles[i].addRepulsionForce(mouseX, mouseY, 30, 35);
 		
-		particles[i].addCounterClockwiseForce(mouseX, mouseY, 1000, 0.05);
+		particles[i].addCounterClockwiseForce(mouseX, mouseY, 300, 0.05);
         
 //		particles[i].addClockwiseForce(mouseX, mouseY, 200, 1);
 //		particles[i].addForce(0,0.04);  // gravity
@@ -66,7 +67,7 @@ void testApp::update(){
     
     for (int i = 0; i < particles2.size(); i++){
 		particles2[i].resetForce2();
-        particles2[i].addAttractionForce2(mouseX, mouseY, 1000, 0.05);
+        particles2[i].addAttractionForce2(mouseX, mouseY, 1000, 0.1);
 		particles2[i].addRepulsionForce2(mouseX, mouseY, 100, 50);
 		
 		particles2[i].addCounterClockwiseForce2(mouseX, mouseY, 1000, 0.1);
@@ -99,7 +100,7 @@ void testApp::draw(){
     
     ofFill();
     
-    ofSetColor(0,100,255, 255*0.05);
+    ofSetColor(0,0,255, 255*0.009);
     ofGradientMode();
     ofRect( ofGetWindowRect() );
     

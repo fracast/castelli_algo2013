@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "KochLine.h"
 
 class testApp : public ofBaseApp{
 
@@ -18,5 +19,9 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+    
+    void addGeneration();
+    vector <KochLine> lineList;
+    
 		
 };

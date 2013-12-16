@@ -43,7 +43,7 @@ void particle::addRepulsionForce(float px, float py, float radius, float strengt
     ofVec2f posOfForce;
     posOfForce.set(px, py);
     
-    ofVec2f diff = pos - posOfForce;
+    ofVec2f diff = (pos - posOfForce);
     
     if (diff.length() < radius) {
         float pct = 1 - (diff.length() / radius);
@@ -69,7 +69,6 @@ void particle::addAttractionForce( float px, float py, float radius, float stren
 	}
 	
 }
-
 
 //------------------------------------------------------------
 void particle::addClockwiseForce( float px, float py, float radius, float strength){
@@ -107,16 +106,11 @@ void particle::addCounterClockwiseForce( float px, float py, float radius, float
 	
 }
 
-
-
-
-
 //------------------------------------------------------------
 void particle::setInitialCondition(float px, float py, float vx, float vy){
     pos.set(px,py);
 	vel.set(vx,vy);
 }
-
 
 //------------------------------------------------------------
 void particle::xenoToPoint (float catchX, float catchY){

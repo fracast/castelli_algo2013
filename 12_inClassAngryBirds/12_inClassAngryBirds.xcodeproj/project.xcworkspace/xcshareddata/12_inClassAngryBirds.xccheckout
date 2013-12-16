@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A46E8A4B-7FBC-4D60-85F7-A3722F6EB4C7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>12_inClassAngryBirds</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3E1A5E4B-34BF-4769-BF42-B767AA0C96CB</key>
+		<string>https://github.com/vanderlin/ofxBox2d.git</string>
+		<key>E338C320-C9F7-45F7-AE0F-B927EA41B257</key>
+		<string>https://github.com/fracast/castelli_algo2013.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>12_inClassAngryBirds/12_inClassAngryBirds.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3E1A5E4B-34BF-4769-BF42-B767AA0C96CB</key>
+		<string>../../../../../addons/ofxBox2d</string>
+		<key>E338C320-C9F7-45F7-AE0F-B927EA41B257</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fracast/castelli_algo2013.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E338C320-C9F7-45F7-AE0F-B927EA41B257</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E338C320-C9F7-45F7-AE0F-B927EA41B257</string>
+			<key>IDESourceControlWCCName</key>
+			<string>algo2013</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3E1A5E4B-34BF-4769-BF42-B767AA0C96CB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxBox2d</string>
+		</dict>
+	</array>
+</dict>
+</plist>
